@@ -1,0 +1,28 @@
+/* CSS Variables untuk Theme */
+:root {
+    --primary: #2ecc71;
+    --accent: #2ecc71;
+    --bg-primary: #e9ffd0;
+    --bg-secondary: #d9ffbc;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --border: #dee2e6;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #081400;
+    --bg-secondary: #0f2900;
+    --text-primary: #f8f9fa;
+    --text-secondary: #adb5bd;
+    --border: #343a40;
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+/* Base theme styles */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: var(--transition);
+}

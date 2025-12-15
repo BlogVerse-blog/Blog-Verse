@@ -1,0 +1,84 @@
+/* Header Styles */
+.header {
+    background:linear-gradient(to bottom, #188500, #52b203) ;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px var(--shadow);
+    border-radius: 0 0 20px 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo h1 {
+    color: var(--accent);
+    margin: 0;
+    margin-left: 15px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo img{
+    width: 50px;
+    margin: 5px;
+    border-radius: 20px 10px 20px 10px;
+    box-shadow: 0 2px 4px var(--shadow);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: #52b203;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    background-color: #126300;
+    border-color: var(--accent);
+}
+
+.theme-toggle:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.moon-icon {
+    display: none;
+}
+
+[data-theme="dark"] .sun-icon {
+    display: none;
+}
+
+[data-theme="dark"] .moon-icon {
+    display: block;
+}

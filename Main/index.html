@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogVerse</title>
+    <link rel="shortcut icon" href="./images/BlogVerse Logo.png" type="image/x-icon">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/themes/theme.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/search.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="./css/components/footer.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Tambahkan di bagian CSS Files -->
+<link rel="stylesheet" href="css/components/loading.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="./images/BlogVerse Logo.png" alt="Logo">
+                    <a href=""><h1>BlogVerse</h1><a>
+                </div>
+                
+                <div class="header-actions">
+                    <!-- Search Component -->
+                    <div class="search-container">
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="search-input" 
+                            placeholder="Cari sesuatu..."
+                            aria-label="Pencarian"
+                        >
+                        <div id="searchResults" class="search-results" aria-live="polite"></div>
+                    </div>
+                    
+                    <!-- Theme Toggle -->
+                    <button 
+                        id="themeToggle" 
+                        class="theme-toggle" 
+                        aria-label="Toggle theme"
+                    >
+                        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 17C14.7614 17 17 14.7614 17 12C17 9.23858 14.7614 7 12 7C9.23858 7 7 9.23858 7 12C7 14.7614 9.23858 17 12 17Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 1V3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M12 21V23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M4.22 4.22L5.64 5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M18.36 18.36L19.78 19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M1 12H3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M21 12H23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M4.22 19.78L5.64 18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 12.79C20.8427 14.4922 20.2039 16.1144 19.1582 17.4668C18.1126 18.8192 16.7035 19.8458 15.0957 20.4265C13.4879 21.0073 11.748 21.1181 10.0795 20.7461C8.41102 20.3741 6.88299 19.5345 5.67422 18.3258C4.46545 17.117 3.62593 15.589 3.2539 13.9205C2.88187 12.252 2.9927 10.5121 3.57345 8.9043C4.1542 7.29651 5.18082 5.88737 6.5332 4.84175C7.88558 3.79614 9.5078 3.15731 11.21 3C10.2134 4.34827 9.73375 6.00945 9.85849 7.68141C9.98324 9.35338 10.7039 10.9251 11.8894 12.1106C13.0749 13.2961 14.6466 14.0168 16.3186 14.1415C17.9906 14.2663 19.6517 13.7866 21 12.79Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main" role="main">
+        <div class="container">
+            <!-- Cards Grid -->
+            <h1 style="margin: 25px; text-align: center;">Konten Kami</h1>
+            <section class="cards-section">
+                <div id="cardsContainer" class="cards-grid" role="list" aria-label="Daftar konten">
+                    <!-- Cards akan di-generate oleh JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-container">
+            <img src="./images/BlogVerse Logo.png" alt="">
+            <div class="loading-logo">BlogVerse</div>
+            
+            <div class="loading-animation">
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+                <div class="loading-dot"></div>
+            </div>
+            
+            <div class="loading-progress">
+                <div class="loading-progress-bar"></div>
+            </div>
+            
+            <div class="loading-text">Memuat pengalaman terbaik...</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h5 class="copyright">&copy;2025 Blog Verse. All Rights Are Reserved.</h5>
+        <a href="https://forms.gle/MKafDdcXwJs6SMro7" target="_blank">
+            <p class="report">Find Bug? Click Here to Report</p>
+        </a>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/data/sampleData.js"></script>
+    <script src="js/modules/utils.js"></script>
+    <script src="js/modules/theme.js"></script>
+    <script src="js/modules/search.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Tambahkan di bagian JavaScript Files, sebelum app.js -->
+    <script src="js/modules/loading.js"></script>
+</body>
+</html>

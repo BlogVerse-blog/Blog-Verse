@@ -1,0 +1,20 @@
+footer {
+    background :var(--bg-secondary);
+    /* align-items: center; */
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+footer>a {
+    text-decoration: none;
+    color: var(--text-primary);
+    text-align: center;
+}
+
+.copyright {
+    margin-bottom: 10px;
+    padding: 8px;
+    text-align: center;
+}
